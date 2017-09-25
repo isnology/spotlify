@@ -6,7 +6,7 @@
   <div>
     <h2><%= link_to song.name, song %></h2>
     <p><%= song.artist.name %></p>
-    <p><%= song.duration %></p>
+    <p><%= format_duration(song.duration) %></p>
     <p><%= song.released_at %></p>
     <p>
       <%= link_to 'Edit', edit_song_path(song) %>
