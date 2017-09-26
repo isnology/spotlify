@@ -10,6 +10,13 @@ class SongsController < ApplicationController
   # GET /songs/1
   # GET /songs/1.json
   def show
+    if play = Play.find_by(song: @song, play_date: Date.today)
+      play.count += 1
+      play.save
+    else
+      Play.create(song: @song, count: 1, play_date: Date.today)
+    end
+    #@count = play.count
   end
 
   # GET /songs/new

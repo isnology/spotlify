@@ -6,7 +6,7 @@
 </h1>
 
 <p>
-  <%= @song.artist.name %>
+  <%= link_to @song.artist.name, @song.artist %>
 </p>
 
 <p>
@@ -17,6 +17,11 @@
 <p>
   <strong>Released at:</strong>
   <%= @song.released_at %>
+</p>
+
+<p>
+  <strong>Play Count:</strong>
+  <%= @song.plays.first.count %>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |

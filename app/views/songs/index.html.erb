@@ -1,20 +1,22 @@
 <p id="notice"><%= notice %></p>
+<div class="main">
+  <h1>Songs</h1>
+</div>
 
-<h1>Songs</h1>
+<div class="content">
+  <% @songs.each do |song| %>
+    <div class="item">
+      <h2><%= link_to song.name, song %></h2>
+      <p><%= song.artist.name %></p>
+      <p>Duration: <%= format_duration(song.duration) %></p>
+      <p>Released: <%= song.released_at %></p>
+      <p>
+        <%= link_to 'Edit', edit_song_path(song) %>
+        <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </div>
+  <% end %>
+</div>
 
-<% @songs.each do |song| %>
-  <div>
-    <h2><%= link_to song.name, song %></h2>
-    <p><%= song.artist.name %></p>
-    <p><%= format_duration(song.duration) %></p>
-    <p><%= song.released_at %></p>
-    <p>
-      <%= link_to 'Edit', edit_song_path(song) %>
-      <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-  </div>
-<% end %>
-
-<br>
 
 <%= link_to 'New Song', new_song_path %>

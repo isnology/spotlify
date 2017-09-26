@@ -1,0 +1,144 @@
+$heading: #571F4E;
+$minor_heading: #5D5179;
+$text: #4F759B;
+$bg: #92C9B1;
+
+
+
+
+
+$decade-0: #FFDF1A;
+$decade-1: #FFCC23;
+$decade-2: #FFA924;
+$decade-3: #FF7D20;
+$decade-4: #FF1917;
+$decade-5: #FF1059;
+$decade-6: #FF269F;
+$decade-7: #FF20F2;
+$decade-8: #BC20FF;
+$decade-9: #6C1DFF;
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  flex: 1;
+  min-width: 17em;
+  max-width: 17em;
+  padding: 10px;
+  margin: 10px;
+  background: white;
+}
+
+h1 {
+  color: $heading;
+}
+
+.main {
+  h1 {
+    color: $heading;
+    text-align: center;
+  }
+}
+
+body {
+  background: $bg;
+}
+
+
+h2 {
+  color: $minor_heading;
+}
+
+p {
+  color: $text;
+}
+
+a {
+
+  &.decade-0 {
+    color: $decade-0;
+  }
+
+  &.decade-1 {
+    color: $decade-1;
+  }
+
+  &.decade-2 {
+    color: $decade-2;
+  }
+
+  &.decade-3 {
+    color: $decade-3;
+  }
+
+  &.decade-4 {
+    color: $decade-4;
+  }
+
+  &.decade-5 {
+    color: $decade-5;
+  }
+
+  &.decade-6 {
+    color: $decade-6;
+  }
+
+  &.decade-7 {
+    color: $decade-7;
+  }
+
+  &.decade-8 {
+    color: $decade-8;
+  }
+
+  &.decade-9 {
+    color: $decade-9;
+  }
+}
+
+a:visited {
+
+  &.decade-0 {
+    color: $decade-0;
+  }
+
+  &.decade-1 {
+    color: $decade-1;
+  }
+
+  &.decade-2 {
+    color: $decade-2;
+  }
+
+  &.decade-3 {
+    color: $decade-3;
+  }
+
+  &.decade-4 {
+    color: $decade-4;
+  }
+
+  &.decade-5 {
+    color: $decade-5;
+  }
+
+  &.decade-6 {
+    color: $decade-6;
+  }
+
+  &.decade-7 {
+    color: $decade-7;
+  }
+
+  &.decade-8 {
+    color: $decade-8;
+  }
+
+  &.decade-9 {
+    color: $decade-9;
+  }
+}

@@ -1,21 +1,22 @@
 <p id="notice"><%= notice %></p>
+<div class="main">
+  <h1>Artists</h1>
+</div>
 
-<h1>Artists</h1>
+<div class="content">
+  <% @artists.each do |artist| %>
+    <div class="item">
+      <h2><%= link_to artist.name , artist %></h2>
+      <p>Bio: <%= artist.bio %></p>
+      <p>Genre: <%= artist.genre %></p>
+      <p>
+        <%= link_to 'Edit', edit_artist_path(artist) %>
+        <%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </div>
+  <% end %>
+</div>
 
-<% @artists.each do |artist| %>
-  <div>
-    <h2><%= link_to artist.name , artist %></h2>
-    <p><%= artist.bio %></p>
-    <p><%= artist.genre %></p>
-    <p>
-      <%= link_to 'Edit', edit_artist_path(artist) %>
-      <%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </p>
-  </div>
-<% end %>
 
-
-
-<br>
 
 <%= link_to 'New Artist', new_artist_path %>
