@@ -1,0 +1,8 @@
+with p as (select plays.song_id as song_id, sum(plays.count) as play_count from plays
+                group by plays.song_id
+                order by play_count DESC
+                limit 10)
+    
+      select songs.name as song_name, play_count from p
+      join songs on p.song_id = songs.id
+

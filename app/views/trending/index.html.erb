@@ -1,0 +1,9 @@
+<h1>Trending</h1>
+
+<ol>
+  <% @top10.each do |play_count| %>
+  <li>
+    <%= play_count.song_name %>  (<%= play_count.play_count %> plays)
+  </li>
+  <% end %>
+</ol>
